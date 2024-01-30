@@ -1,0 +1,135 @@
+.goods {
+  &__createbox {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px black;
+    margin-bottom: 25px;
+    width: 100%;
+
+    & > h3 {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      align-self: center;
+    }
+  }
+
+  &__createimg {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & > input {
+      border: 1px solid black;
+      min-width: 100%;
+      padding: 3px;
+    }
+  }
+
+  &__createname {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & > input {
+      border: 1px solid black;
+      min-width: 100%;
+      padding: 3px;
+    }
+  }
+
+  &__createdescription {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & > textarea {
+      border: 1px solid black;
+      min-width: 100%;
+      padding: 3px;
+    }
+  }
+
+  &__createtype {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & > select {
+      border: 1px solid black;
+      padding: 3px;
+    }
+  }
+
+  &__createprice {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & > input {
+      border: 1px solid black;
+      min-width: 100%;
+      padding: 3px;
+    }
+  }
+
+  &__btns {
+    &_marginright button {
+      margin-right: 5px;
+    }
+  }
+
+  &__btn {
+    &_upwidth {
+      width: 150px;
+    }
+  }
+}
+
+.good__anim {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+  visibility: visible;
+}
+.good__anim-enter-done {
+  opacity: 1;
+  visibility: visible;
+}
+// .good__anim-exit {
+//   opacity: 1;
+//   visibility: visible;
+// }
+// .good__anim-exit-active {
+//   opacity: 0;
+//   transition: opacity 1000ms;
+//   visibility: hidden;
+// }
+// .good__anim-exit-done {
+//   opacity: 0;
+//   visibility: hidden;
+// }

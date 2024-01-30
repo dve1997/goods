@@ -1,0 +1,115 @@
+.goods {
+  &__items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 10px 25px 0;
+  }
+
+  &__item {
+    min-width: 235px;
+    padding: 10px;
+    margin: 0 10px 10px 0;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px black;
+    position: relative;
+  }
+
+  &__product {
+    position: relative;
+    padding-bottom: 130%;
+
+    & > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      object-fit: contain;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__name {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 900;
+    }
+  }
+
+  &__description {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  &__type {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  &__price {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  &__sale {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  &__delete {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid black;
+    }
+  }
+}
+
+.good__anim {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+  visibility: visible;
+}
+.good__anim-enter-done {
+  opacity: 1;
+  visibility: visible;
+}
+// .good__anim-exit {
+//   opacity: 1;
+//   visibility: visible;
+// }
+// .good__anim-exit-active {
+//   opacity: 0;
+//   transition: opacity 1000ms;
+//   visibility: hidden;
+// }
+// .good__anim-exit-done {
+//   opacity: 0;
+//   visibility: hidden;
+// }

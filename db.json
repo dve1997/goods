@@ -1,0 +1,112 @@
+{
+  "goods": [
+    {
+      "id": "96fcbd5c-3cc4-4d8b-aea1-598d6307d4f7",
+      "src": "https://spb-apple.ru/image/cache/catalog/apple12/apple%2012/apple12_white_2-700x700.jpg",
+      "name": "Iphone 12",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "phone",
+      "price": "60000",
+      "sale": "30"
+    },
+    {
+      "id": "d62bb75e-1259-4cd4-9d21-8e5e407d931a",
+      "src": "https://my-apple-store.ru/wa-data/public/shop/products/50/18/11850/images/17321/17321.970.jpg",
+      "name": "Iphone 13",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "phone",
+      "price": "70000",
+      "sale": "15"
+    },
+    {
+      "id": "063c1829-1c2c-475e-9580-9a7efb948015",
+      "src": "https://istorespb.ru/wp-content/uploads/2022/09/apple-iphone-14-white-belyj-600x600.jpeg",
+      "name": "Iphone 14",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "phone",
+      "price": "80000",
+      "sale": "10"
+    },
+    {
+      "id": "2ed268a5-5287-4d12-a054-8380e24462f6",
+      "src": "https://twigo.ru/center/iblock/ae5/2gjh1l8xtekfg3wxcfha6p6tnxq9hl1s/y6ne6pfymgp4jpea4uxc6hw00jws76c5.jpeg",
+      "name": "Iphone 15",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "phone",
+      "price": "90000",
+      "sale": "0"
+    },
+    {
+      "id": "d52897a9-2d8f-4e0c-9f86-6d3115f951cc",
+      "src": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-ipad-cell-silver-2019?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1593017598000",
+      "name": "Ipad 7",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "tablet",
+      "price": "20000",
+      "sale": "30"
+    },
+    {
+      "id": "d4be7866-e40d-4a2a-98e0-b097d3cd7305",
+      "src": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-ipad-wifi-silver-2020?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1626464531000",
+      "name": "Ipad 8",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "tablet",
+      "price": "30000",
+      "sale": "15"
+    },
+    {
+      "id": "89b38dbd-9046-418a-a7c2-f399481fa182",
+      "src": "https://niceapplespb.ru/wp-content/uploads/2023/07/apple-ipad-102-2021-wi-fi-64-gb-silver.jpeg",
+      "name": "Ipad 9",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "tablet",
+      "price": "40000",
+      "sale": "10"
+    },
+    {
+      "id": "92a42962-d536-44a3-8526-9b77c2cae148",
+      "src": "https://hi-stores.ru/upload/iblock/ee6/62jxdktyg6bacmcijuhf0kpbse3b3pnr.jpg",
+      "name": "Ipad 10",
+      "description": "цвет: белый, объем памяти: 128 Гб",
+      "type": "tablet",
+      "price": "50000",
+      "sale": "0"
+    },
+    {
+      "id": "439fb097-50ba-4133-86df-11149dcca0cc",
+      "src": "https://www.covershop33.ru/wp-content/uploads/2023/03/MacBook-Air-M1-Space-Gray.jpeg",
+      "name": "Macbook m1",
+      "description": "цвет: серый, объем памяти: 256 Гб, процессор: m1",
+      "type": "laptop",
+      "price": "100000",
+      "sale": "30"
+    },
+    {
+      "id": "bc4ab8a8-abdb-42c1-ad8e-8eb1add607a2",
+      "src": "https://www.covershop33.ru/wp-content/uploads/2023/03/MacBook-Air-M1-Space-Gray.jpeg",
+      "name": "Macbook m1",
+      "description": "цвет: серый, объем памяти: 512 Гб, процессор: m1",
+      "type": "laptop",
+      "price": "110000",
+      "sale": "15"
+    },
+    {
+      "id": "46b3e794-a9ec-4d93-9ea1-4ab995690669",
+      "src": "https://ishop124.ru/wp-content/uploads/2022/10/macbook-air-spacegray1.jpg",
+      "name": "Macbook m2",
+      "description": "цвет: серый, объем памяти: 256 Гб, процессор: m2",
+      "type": "laptop",
+      "price": "120000",
+      "sale": "10"
+    },
+    {
+      "id": "7e7ebaff-24ca-4ff9-b14b-8bc177d6d96d",
+      "src": "https://ishop124.ru/wp-content/uploads/2022/10/macbook-air-spacegray1.jpg",
+      "name": "Macbook m2",
+      "description": "цвет: серый, объем памяти: 512 Гб, процессор: m2",
+      "type": "laptop",
+      "price": "130000",
+      "sale": "0"
+    }
+  ]
+}

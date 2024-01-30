@@ -1,0 +1,45 @@
+.goods {
+  &__error {
+    text-align: center;
+    width: 100%;
+
+    & h3 {
+      margin-bottom: 15px;
+    }
+
+    & img {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.good__anim {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+  visibility: visible;
+}
+.good__anim-enter-done {
+  opacity: 1;
+  visibility: visible;
+}
+// .good__anim-exit {
+//   opacity: 1;
+//   visibility: visible;
+// }
+// .good__anim-exit-active {
+//   opacity: 0;
+//   transition: opacity 1000ms;
+//   visibility: hidden;
+// }
+// .good__anim-exit-done {
+//   opacity: 0;
+//   visibility: hidden;
+// }

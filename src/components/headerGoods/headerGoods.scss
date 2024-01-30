@@ -1,0 +1,85 @@
+.goods {
+  &__headerbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 21, 36, 1) 0%,
+      rgba(9, 73, 121, 1) 15%,
+      rgba(0, 194, 255, 1) 100%
+    );
+    box-shadow: 3px 3px 3px black;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    height: 70px;
+  }
+
+  &__logo {
+    & > img {
+      width: 45px;
+    }
+  }
+
+  &__links {
+    & > span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__list {
+    padding-right: 5px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+      font-weight: 900;
+    }
+  }
+
+  &__create {
+    padding-left: 5px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+      font-weight: 900;
+    }
+  }
+}
+
+.good__anim {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+  visibility: visible;
+}
+.good__anim-enter-done {
+  opacity: 1;
+  visibility: visible;
+}
+// .good__anim-exit {
+//   opacity: 1;
+//   visibility: visible;
+// }
+// .good__anim-exit-active {
+//   opacity: 0;
+//   transition: opacity 1000ms;
+//   visibility: hidden;
+// }
+// .good__anim-exit-done {
+//   opacity: 0;
+//   visibility: hidden;
+// }

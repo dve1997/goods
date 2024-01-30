@@ -1,0 +1,90 @@
+.goods {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px black;
+    margin-bottom: 35px;
+  }
+
+  &__search {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & > input {
+      border: 1px solid black;
+      min-width: 100%;
+      padding: 3px;
+    }
+  }
+
+  &__filterprice {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__btn {
+    font-weight: 500;
+    border: 1px solid black;
+    width: 75px;
+    height: 37px;
+
+    &:hover {
+      font-weight: 900;
+    }
+  }
+
+  &__filtertype {
+    margin-bottom: 10px;
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.good__anim {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.good__anim-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+  visibility: visible;
+}
+.good__anim-enter-done {
+  opacity: 1;
+  visibility: visible;
+}
+// .good__anim-exit {
+//   opacity: 1;
+//   visibility: visible;
+// }
+// .good__anim-exit-active {
+//   opacity: 0;
+//   transition: opacity 1000ms;
+//   visibility: hidden;
+// }
+// .good__anim-exit-done {
+//   opacity: 0;
+//   visibility: hidden;
+// }
