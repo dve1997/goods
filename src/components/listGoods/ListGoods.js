@@ -4,8 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { GoodsContext } from "../../App";
 import Spinner from "../../components/spinner/Spinner";
-import { useHttp } from "../../hooks/http.hook";
-import { loading } from "../../actions/actions";
+import { getProduct, deleteProduct } from "../../actions/actions";
 
 import "./listGoods.scss";
 
@@ -115,18 +114,7 @@ const ListGoods = () => {
 const Product = (props) => {
   const { id, src, name, price, sale } = props.product;
 
-  const { deleteData } = useHttp();
-
-  const { dispatch, setIdProduct } = useContext(GoodsContext);
-
-  const onDeleteProduct = (id) => {
-    deleteData("http://localhost:3001/goods/" + id)
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error))
-      .finally(() => {
-        dispatch(loading());
-      });
-  };
+  const { dispatch } = useContext(GoodsContext);
 
   return (
     <div className="goods__item">
@@ -137,13 +125,16 @@ const Product = (props) => {
         to={`/product/${id}`}
         end
         className={() => "goods__name"}
-        onClick={() => setIdProduct(id)}
+        onClick={() => dispatch(getProduct(props.product))}
       >
         {name}
       </NavLink>
       <div className="goods__price">{price} руб</div>
       <div className="goods__sale">Скидка: {sale} %</div>
-      <div className="goods__delete" onClick={() => onDeleteProduct(id)}>
+      <div
+        className="goods__delete"
+        onClick={() => dispatch(deleteProduct(id))}
+      >
         &#9746;
       </div>
     </div>

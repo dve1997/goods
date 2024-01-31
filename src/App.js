@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 import { useHttp } from "./hooks/http.hook";
 import reducer from "./reducer/reducer";
-import { loaded, error } from "./actions/actions";
+import { loaded, error, createProduct, deleteProduct } from "./actions/actions";
 
 import HeaderGoods from "./components/headerGoods/HeaderGoods";
 import FooterGoods from "./components/footerGoods/FooterGoods";
@@ -17,7 +17,7 @@ import "./App.scss";
 export const GoodsContext = createContext(null);
 
 function App() {
-  const { getData } = useHttp();
+  const { getData, postData, deleteData } = useHttp();
 
   const initialState = {
     statusLoading: "loaded",
@@ -25,27 +25,42 @@ function App() {
     filterPrice: "all",
     filterType: "all",
     filterSearch: "",
+    getProduct: {},
+    createProduct: null,
+    deletePoduct: null,
   };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const { Provider } = GoodsContext;
 
-  const [idProduct, setIdProduct] = useState(null);
-
   useEffect(() => {
+    if (state.createProduct != null) {
+      postData("http://localhost:3001/goods", "POST", state.createProduct)
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error))
+        .finally(() => dispatch(createProduct(null)));
+    }
+
+    if (state.deletePoduct != null) {
+      deleteData("http://localhost:3001/goods/" + state.deletePoduct)
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error))
+        .finally(() => dispatch(deleteProduct(null)));
+    }
+
     getData("http://localhost:3001/goods")
       .then((data) => dispatch(loaded(data)))
       .catch((errorMessage) => {
         console.log(errorMessage);
         dispatch(error());
       });
-  }, [state.statusLoading]);
+  }, [state.createProduct, state.deletePoduct]);
 
   return (
     <div className="goods__wrapper">
       <div className="goods__conteiner">
         <Router>
-          <Provider value={{ state, dispatch, idProduct, setIdProduct }}>
+          <Provider value={{ state, dispatch }}>
             <div className="goods__page">
               <header className="goods__header">
                 <HeaderGoods />

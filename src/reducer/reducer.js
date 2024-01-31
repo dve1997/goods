@@ -19,6 +19,21 @@ const reducer = (state, active) => {
         ...state,
         statusLoading: "error",
       };
+    case "product":
+      return {
+        ...state,
+        getProduct: active.payload,
+      };
+    case "create":
+      return {
+        ...state,
+        createProduct: active.payload,
+      };
+    case "delete":
+      return {
+        ...state,
+        deletePoduct: active.payload,
+      };
     default:
       break;
   }

@@ -3,9 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import { useState, useContext, useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import { useHttp } from "../../hooks/http.hook";
 import { GoodsContext } from "../../App";
-import { loading } from "../../actions/actions";
+import { createProduct } from "../../actions/actions";
 
 import "./createProduct.scss";
 
@@ -16,8 +15,6 @@ const CreateProduct = () => {
   useEffect(() => {
     setAnim(true);
   }, []);
-
-  const { postData } = useHttp();
 
   const { dispatch } = useContext(GoodsContext);
 
@@ -67,18 +64,6 @@ const CreateProduct = () => {
       default:
         break;
     }
-  };
-
-  const onCreatePoduct = (dataForm) => {
-    const data = JSON.stringify(dataForm);
-
-    postData("http://localhost:3001/goods", "POST", data)
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error))
-      .finally(() => {
-        setDataForm(initialDataForm);
-        dispatch(loading());
-      });
   };
 
   return (
@@ -155,14 +140,22 @@ const CreateProduct = () => {
           </NavLink>
           <button
             className="goods__btn goods__btn_upwidth"
-            onClick={() => onCreatePoduct(dataForm)}
+            onClick={() => {
+              const data = JSON.stringify(dataForm);
+              dispatch(createProduct(data));
+              setDataForm(initialDataForm);
+            }}
           >
             Создать
           </button>
           <NavLink to="/">
             <button
               className="goods__btn goods__btn_upwidth"
-              onClick={() => onCreatePoduct(dataForm)}
+              onClick={() => {
+                const data = JSON.stringify(dataForm);
+                dispatch(createProduct(data));
+                setDataForm(initialDataForm);
+              }}
             >
               Создать и вернуться к списку товаров
             </button>

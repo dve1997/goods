@@ -3,7 +3,6 @@ import { CSSTransition } from "react-transition-group";
 import { useState, useRef, useEffect, useContext } from "react";
 
 import { GoodsContext } from "../../App";
-import { useHttp } from "../../hooks/http.hook";
 
 import "./infoProduct.scss";
 
@@ -15,20 +14,9 @@ const InfoProduct = () => {
     setAnim(true);
   }, []);
 
-  const { getData } = useHttp();
+  const { state } = useContext(GoodsContext);
 
-  const { idProduct } = useContext(GoodsContext);
-
-  const [product, setProduct] = useState({});
-  const { src, name, description, type, price, sale } = product;
-
-  useEffect(() => {
-    getData("http://localhost:3001/goods/" + idProduct)
-      .then((data) => setProduct(data))
-      .catch((errorMessage) => {
-        console.log(errorMessage);
-      });
-  }, []);
+  const { src, name, description, type, price, sale } = state.getProduct;
 
   return (
     <CSSTransition
